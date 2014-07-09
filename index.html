@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BBC Test</title>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/myCalc.js"></script>  
+</head>
+<body>
+	<p><strong>Please type in a currency amount and press enter</strong></p>
+	<input id='currency'></input>
+	<div id="workarea">
+	</div>
+	
+<script>
+
+	$(document).ready(function () {
+		$("#currency").on('keyup', function(e) {
+			e.preventDefault();
+			if(e.keyCode == 13) {
+				lsd_calc($(this))
+			}
+		});
+	});
+	
+</script>
+ 
+</body>
+</html>
